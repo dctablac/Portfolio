@@ -7,7 +7,6 @@ class Contact extends Component {
                 <h1>Contact</h1>
                 <ul>
                     <li>Email: dctablac@gmail.com</li>
-                    <li>Number 2</li>
                 </ul>
             </div>
         );

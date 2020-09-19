@@ -15,17 +15,54 @@
     display: flex;
 }
 .btn {
+    border-radius: 50%;
     cursor: pointer;
     font-size: 2rem;
     height: 5vh;
+    outline: none;
+    padding: 5px;
+    transition-duration: 0.2s;
     z-index: 1;
 }
+.btn:hover {
+    background: black;
+    color: white;
+}
 .content-container {
+    background-color: rgb(229, 226, 226);
     display: flex;
     flex-direction: column;
-    width: 80%;
-    background-color: rgb(229, 226, 226);
     padding: 4%;
+    width: 90%;
+}
+.home-container {
+    padding: 0%;
+}
+#home-bg {
+    height: 100vh;
+    opacity: 60%;
+    position: relative;
+}
+#home-text {
+    letter-spacing: 5px;
+    margin-top: 5%;
+    position: absolute;
+    word-spacing: 10px;
+}
+#home-greeting {
+    animation: fadeIn 0.5s ease;
+    font-size: 4rem;
+    margin: 2%;
+}
+#home-name {
+    animation: fadeIn 1.5s ease;
+    font-size: 10rem;
+    margin: 2%;
+}
+#home-statement {
+    animation: fadeIn 2.5s ease;
+    font-size: 4rem;
+    margin: 2%;
 }
 .nav-bar {
     display: flex;
@@ -98,10 +135,9 @@
     font-size: 1rem;
     margin: 2%;
     padding: 3%;
-    transition-duration: 0.2s;
 }
 .tech-tag:hover {
-    color: white;
+    transform: scale(1.2);
 }
 
 @keyframes fadeIn {
@@ -122,12 +158,16 @@
 @media (max-width: 1200px) {
 
     .content-container {
-        width: 100%;
+        height: 100%;
         padding-bottom: 10%;
+        width: 100%;
+    }
+    .content-container h1 {
+        text-align: center;
     }
     .nav-bar {
         position: fixed;
-        z-index: 1;
+        z-index: 2;
         flex-direction: row;
         top: 90%;
         width: 100%;
@@ -143,10 +183,10 @@
         padding-bottom: 2%;
     }
     .project {
-        display: grid;
-        justify-items: center;
         align-items: center;
+        display: grid;
         height: auto;
+        justify-items: center;
         padding: 8%;
     }
     .project-image-container {
