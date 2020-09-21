@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 
 :root {
+    --bg-color: rgb(229, 226, 226);
+    --shadow: 0px 5px 10px black;
+    background-color: var(--bg-color);
     font-size: 16px;
-    background-color: white;
     font-family: 'Roboto Condensed', sans-serif;
 }
 * {
@@ -15,10 +17,12 @@
     display: flex;
 }
 .btn {
-    border-radius: 50%;
+    border: none;
+    border-radius: 25%;
     cursor: pointer;
     font-size: 2rem;
     height: 5vh;
+    opacity: 85%;
     outline: none;
     padding: 5px;
     transition-duration: 0.2s;
@@ -28,31 +32,94 @@
     background: black;
     color: white;
 }
-.content-container {
-    background-color: rgb(229, 226, 226);
-    display: flex;
-    flex-direction: column;
-    padding: 4%;
-    width: 90%;
+.btn-contact {
+    cursor: pointer;
+    justify-self: center;
+    padding: 2%;
+    transition-duration: 0.3s;
+    width: 30%;
 }
-.home-container {
-    padding: 0%;
+.btn-contact:hover {
+    background: black;
+    color: white;
 }
-#home-bg {
-    height: 100vh;
-    opacity: 60%;
+.btn-contact, .contact-email, .contact-name, .contact-msg {
+    border: 1px solid grey;
+    border-radius: 2px;
+    background-color: --bg-color;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 5%;
+}
+.contact-form {
+    animation: fadeIn90 0.3s ease; 
+    background-color: var(--bg-color);
+    box-shadow: var(--shadow);
+    display: grid;
+    align-items: center;
+    height: auto;
+    opacity: 95%;
+    position: absolute;
+    width: 30%;
+}
+.contact-form-content {
+    display: grid;
+    padding: 5%;
+    padding-bottom: 0;
+}
+.contact-form-content label {
+    margin-bottom: 1%; 
+}
+.contact-form h1 {
+    background: darkgrey;
+    
+    padding: 5%;
+    text-align: center;
+}
+.contact-msg {
+    height: 25vh;
+    padding: 1%;
     position: relative;
 }
-#home-text {
-    letter-spacing: 5px;
-    margin-top: 5%;
-    position: absolute;
-    word-spacing: 10px;
+.contact-name, .contact-email {
+    padding: 1%;
+    width: 60%;
+}
+.content-container {
+    background-color: rgba(229, 226, 226);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+}
+.contact-container {
+    align-items: center;
+    height: auto;
+    justify-content: center;
+    padding: 0;
+}
+.home-bg {
+    height: 100%;
+    opacity: 60%;
+    position: fixed;
+    width: 100%;
+}
+#home-container {
+    padding: 0%;
 }
 #home-greeting {
     animation: fadeIn 0.5s ease;
     font-size: 4rem;
     margin: 2%;
+}
+.home-line {
+    animation: drawLine 1.2s ease forwards;
+    background: black;
+    border: none;
+    height: 4px;
+    margin-left: 10%;
+    width: 500px;
+    
 }
 #home-name {
     animation: fadeIn 1.5s ease;
@@ -64,6 +131,12 @@
     font-size: 4rem;
     margin: 2%;
 }
+#home-text {
+    letter-spacing: 5px;
+    margin-top: 5%;
+    position: absolute;
+    word-spacing: 10px;
+}
 .nav-bar {
     display: flex;
     flex-direction: column;
@@ -74,6 +147,7 @@
 
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 .nav-link {
     text-align: center;
@@ -98,11 +172,15 @@
     margin: 5%;
     padding: 5%;
 }
+.project-container {
+    height: 100%;
+}
 .project-image-container {
     align-items: center;
     display: flex;
-    height: 90%;
+    height: 500px;
     justify-content: center;
+    padding: 2%;
     width: 75%;
 }
 .project-image {
@@ -127,7 +205,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 3%;
+    margin-top: 5%;
 }
 .tech-tag {
     background: lightgrey;
@@ -138,6 +216,28 @@
 }
 .tech-tag:hover {
     transform: scale(1.2);
+}
+
+@keyframes drawLine {
+    from {
+        margin-left: 20%;
+        opacity: 0%;
+        width: 0%;
+    }
+    to {
+        margin-left: 5%;
+        opacity: 100%;
+        width: 30vw;
+    }
+}
+
+@keyframes fadeIn90 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 90%;
+    }
 }
 
 @keyframes fadeIn {
@@ -157,13 +257,29 @@
 
 @media (max-width: 1200px) {
 
+    :root {
+        font-size: 12px;
+    }
+    .btn {
+        font-size: 1.5rem;
+        opacity: 100%;
+    }
+    .contact-container {
+        height: 80vh;
+    }
     .content-container {
-        height: 100%;
-        padding-bottom: 10%;
+        min-height: 80vh;
+        padding-bottom: 15vh;
         width: 100%;
     }
     .content-container h1 {
         text-align: center;
+    }
+    .contact-form {
+        width: 50%;
+    }
+    #home-bg {
+        min-height: 100vh;
     }
     .nav-bar {
         position: fixed;
