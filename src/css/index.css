@@ -22,7 +22,7 @@
     flex-direction: column;
     margin: 2%;
     min-height: 100vh;
-    opacity: 90%;
+    opacity: .90;
     padding: 2%;
     width: auto;
     z-index: 1;
@@ -93,7 +93,7 @@
     display: grid;
     align-items: center;
     height: auto;
-    opacity: 95%;
+    opacity: .95;
     position: absolute;
     width: 40vw;
 }
@@ -134,7 +134,6 @@
     width: 80%;
 }
 .content-container {
-    background: url("./images/losangeles.png");
     display: flex;
     flex-direction: column;
     height: auto;
@@ -172,7 +171,7 @@
 }
 .content-bg {
     height: 100%;
-    opacity: 60%;
+    opacity: .60;
     position: fixed;
     width: 100%;
 }
@@ -255,7 +254,7 @@
     cursor: pointer;
     font-size: 2rem;
     height: 10vh;
-    opacity: 85%;
+    opacity: .85;
     outline: none;
     padding: 5px;
     transition-duration: 0.2s;
@@ -344,12 +343,12 @@
 @keyframes drawLine {
     from {
         margin-left: 20%;
-        opacity: 0%;
+        opacity: 0;
         width: 0%;
     }
     to {
         margin-left: 5%;
-        opacity: 100%;
+        opacity: 1;
         width: 30vw;
     }
 }
@@ -359,7 +358,7 @@
         opacity: 0;
     }
     to {
-        opacity: 90%;
+        opacity: .90;
     }
 }
 
@@ -368,7 +367,7 @@
         opacity: 0;
     }
     to {
-        opacity: 100;
+        opacity: 1;
     }
 }
 
@@ -385,7 +384,7 @@
     }
     .btn {
         font-size: 1.5rem;
-        opacity: 100%;
+        opacity: 1;
     }
     .contact-container {
         height: 80vh;

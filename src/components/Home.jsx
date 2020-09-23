@@ -4,7 +4,7 @@ class Home extends Component {
     render() {
         return (
             <div id="home-container" className="content-container">
-
+                <img className="content-bg" src="images/losangeles.png" alt="Los Angeles" />
                 <div id="home-text">
                     <h3 id="home-greeting">Hi. My name is</h3>
                     <h3 id="home-name">Dan Tablac.</h3>
