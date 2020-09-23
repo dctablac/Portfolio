@@ -134,6 +134,7 @@
     width: 80%;
 }
 .content-container {
+    background: url("./images/losangeles.png");
     display: flex;
     flex-direction: column;
     height: auto;
