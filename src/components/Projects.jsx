@@ -4,11 +4,21 @@ class Projects extends Component {
 
     state = {
         fabflix_index: 0,
-        fabflix_media: ["https://www.youtube.com/watch?v=g9-I4du2Lfw", "fabflix-1.png", "fabflix-2.png", "fabflix-3.png", "fabflix-4.png", "fabflix-5.png"],
+        fabflix_media: ["https://www.youtube.com/watch?v=g9-I4du2Lfw", 
+                        "fabflix-1.png", 
+                        "fabflix-2.png", 
+                        "fabflix-3.png", 
+                        "fabflix-4.png", 
+                        "fabflix-5.png"],
         fabflix_img: "https://www.youtube.com/watch?v=g9-I4du2Lfw",
 
         golftracker_index: 0,
-        golftracker_media: ["golftracker-1.png", "golftracker-2.png"],
+        golftracker_media: ["golftracker-1.png", 
+                            "golftracker-2.png",
+                            "golftracker-3.png",
+                            "golftracker-4.png",
+                            "golftracker-5.png",
+                            "golftracker-6.png"],
         golftracker_img: "golftracker-1.png"
         
     }
@@ -98,7 +108,7 @@ class Projects extends Component {
         return (
             <div className="project">
                 <div className="project-image-container">
-                    <button className="btn" name={projectName} onClick={this.prevPhoto}>&larr;</button>
+                    <button className="proj-img-btn" name={projectName} onClick={this.prevPhoto}>&larr;</button>
                     {/* If project is fabflix, show video as first element */}
                     {(projectIndex === 0) && (projectName === "fabflix") &&
                         <iframe className="project-image" title="fabflix" width="760" height="315" src="https://www.youtube.com/embed/g9-I4du2Lfw" 
@@ -113,7 +123,7 @@ class Projects extends Component {
                     {(projectName !== "fabflix") && 
                         <img className="project-image" src={"images/"+projectImage} alt={projectName} />
                     }
-                    <button className="btn" name={projectName} onClick={this.nextPhoto}>&rarr;</button>
+                    <button className="proj-img-btn" name={projectName} onClick={this.nextPhoto}>&rarr;</button>
                 </div>
                 <div className="project-info">
                     <h1>{projectTitle}</h1>
@@ -134,7 +144,7 @@ class Projects extends Component {
     render() {
         return (
             <div className="content-container">
-                <img className="home-bg" src="images/losangeles.png" alt="Los Angeles" />
+                <img className="content-bg" src="images/losangeles.png" alt="Los Angeles" />
                 <div className="project-container">
                     {this.projectCard(
                         "fabflix", "FabFlix", 

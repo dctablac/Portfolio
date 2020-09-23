@@ -13,43 +13,78 @@
     font-weight: 400;
 }
 
+.about-container {
+    align-items: center;
+    animation: fadeIn ease 0.3s;
+    background: var(--bg-color);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+    min-height: 100vh;
+    opacity: 90%;
+    padding: 2%;
+    width: auto;
+    z-index: 1;
+}
+.about-pic-container {
+    background: white;
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+    padding-bottom: 0;
+    width: 75%;
+}
+.about-pic {
+    border-radius: 50%;
+    align-items: center;
+    justify-self: center;
+    height: 175px;
+    margin-top: 5%;
+    width: 175px;
+    object-fit: cover;
+}
+.about-text-container {
+    background: white;
+    display: grid;
+    padding: 2%;
+    width: 75%;
+}
+.about-text-container p {
+    display: flex;
+    font-size: 1.2em;
+    line-height: 150%;
+    margin: 2% 0;
+    text-indent: 2em;
+}
 .app {
     display: flex;
 }
-.btn {
-    border: none;
-    border-radius: 25%;
-    cursor: pointer;
-    font-size: 2rem;
-    height: 5vh;
-    opacity: 85%;
-    outline: none;
-    padding: 5px;
-    transition-duration: 0.2s;
-    z-index: 1;
-}
-.btn:hover {
-    background: black;
-    color: white;
-}
 .btn-contact {
+    background: red;
+    color: white;
     cursor: pointer;
+    font-weight: bold;
     justify-self: center;
+    letter-spacing: 2px;
     padding: 2%;
     transition-duration: 0.3s;
     width: 30%;
 }
 .btn-contact:hover {
-    background: black;
-    color: white;
+    color: black;
 }
-.btn-contact, .contact-email, .contact-name, .contact-msg {
-    border: 1px solid grey;
+.btn-contact, .contact-email, .contact-name, .contact-phone, .contact-msg {
+    border: none;
     border-radius: 2px;
     background-color: --bg-color;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 1rem;
     margin-bottom: 5%;
+}
+.contact-body {
+    display: flex;
+    width: 100%;
 }
 .contact-form {
     animation: fadeIn90 0.3s ease; 
@@ -60,30 +95,43 @@
     height: auto;
     opacity: 95%;
     position: absolute;
-    width: 30%;
+    width: 40vw;
+}
+.contact-info {
+    align-items: center;
+    background: rgb(224, 220, 220);
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+    padding-top: 15%;
+    width: 40%;
+}
+.contact-info label {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+.contact-info p {
+    margin-bottom: 25%;
+}
+.contact-form h1 {
+    background: darkgrey;
+    padding: 5%;
+    text-align: center;
 }
 .contact-form-content {
     display: grid;
     padding: 5%;
     padding-bottom: 0;
+    width: 60%;
 }
 .contact-form-content label {
     margin-bottom: 1%; 
 }
-.contact-form h1 {
-    background: darkgrey;
-    
-    padding: 5%;
-    text-align: center;
-}
-.contact-msg {
-    height: 25vh;
+.contact-form-content input {
+    margin-bottom: 2%;
     padding: 1%;
-    position: relative;
-}
-.contact-name, .contact-email {
-    padding: 1%;
-    width: 60%;
+    width: 80%;
 }
 .content-container {
     background-color: rgba(229, 226, 226);
@@ -98,7 +146,31 @@
     justify-content: center;
     padding: 0;
 }
-.home-bg {
+.contact-name-label::before {
+    content: "* required field";
+    color: red;
+    display: grid;
+    font-size: 0.85rem;
+    margin-bottom: 5%;
+}
+.contact-name-label::after, 
+.contact-email-label::after,
+.contact-msg-label::after {
+    color: red;
+    content: " *";
+    font-size: 0.85rem;
+}
+.contact-phone-label::after {
+    content: " (ex. 123-456-7890)";
+    font-size: 0.75rem;
+}
+.contact-msg {
+    height: 25vh;
+    padding: 1%;
+    position: relative;
+    resize: none;
+}
+.content-bg {
     height: 100%;
     opacity: 60%;
     position: fixed;
@@ -134,7 +206,7 @@
 #home-text {
     letter-spacing: 5px;
     margin-top: 5%;
-    position: absolute;
+    position: relative;
     word-spacing: 10px;
 }
 .nav-bar {
@@ -164,16 +236,34 @@
     color: white;
 }
 .project {
+    animation: fadeIn ease 0.5s;
     display: flex;
     position: relative;
     
     box-shadow: 0px 5px 10px black;
-    background-color: white;
+    background-color: var(--bg-color);
     margin: 5%;
     padding: 5%;
+    padding-bottom: 0;
 }
 .project-container {
     height: 100%;
+}
+.proj-img-btn {
+    border: none;
+    border-radius: 25%;
+    cursor: pointer;
+    font-size: 2rem;
+    height: 10vh;
+    opacity: 85%;
+    outline: none;
+    padding: 5px;
+    transition-duration: 0.2s;
+    z-index: 1;
+}
+.proj-img-btn:hover {
+    background: black;
+    color: white;
 }
 .project-image-container {
     align-items: center;
@@ -206,6 +296,39 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 5%;
+}
+.resume {
+    background: red;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    justify-self: center;
+    padding: 2%;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.3s;
+    margin: 2%;
+    width: 20%;
+}
+.resume:hover {
+    color: black;
+}
+.social-media {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    margin: 2%;
+}
+.social-media-icon {
+    border: 1px solid white;
+    background: white;
+    height: 50px;
+    object-fit: cover;
+    padding: 10px;
+    width: 50px;
+}
+.social-media-icon:hover {
+    border: 1px solid black;
 }
 .tech-tag {
     background: lightgrey;
@@ -269,26 +392,39 @@
     }
     .content-container {
         min-height: 80vh;
-        padding-bottom: 15vh;
+        padding-top: 10vh;
         width: 100%;
     }
     .content-container h1 {
         text-align: center;
     }
     .contact-form {
-        width: 50%;
+        min-width: 446px;
     }
-    #home-bg {
+    .contact-info {
+        font-size: 1.2rem;
+    }
+    .home-bg {
         min-height: 100vh;
+    }
+    #home-text {
+        margin-top: 15vh;
+    }
+    #home-greeting {
+        font-size: 2.5rem;
+    }
+    #home-name {
+        font-size: 8rem;
+    }
+    #home-statement {
+        font-size: 2.5rem;
     }
     .nav-bar {
         position: fixed;
         z-index: 2;
         flex-direction: row;
-        top: 90%;
         width: 100%;
-        height: auto;
-        bottom: 0;
+        height: 10vh;
         justify-content: center;
         align-items: center;
         
@@ -303,7 +439,12 @@
         display: grid;
         height: auto;
         justify-items: center;
-        padding: 8%;
+        padding: 10%;
+        max-width: 450px;
+    }
+    .project-container {
+        display: grid;
+        justify-content: center;
     }
     .project-image-container {
         width: 100%;
