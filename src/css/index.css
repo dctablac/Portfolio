@@ -81,11 +81,12 @@
     margin: 2%;
     text-align: center;
     text-decoration: none;
+    transition-duration: 0.3s;
     width: 50%;
     
 }
 .btn-repo:hover {
-    color: darkgrey;
+    color: black;
 }
 .btn-contact, .contact-email, .contact-name, .contact-phone, .contact-msg {
     border: none;
