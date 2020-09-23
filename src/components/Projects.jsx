@@ -137,10 +137,13 @@ class Projects extends Component {
                         })}
                     </div>
                 </div>
+                <a className="btn-repo" href={"http://github.com/dctablac/"+projectTitle}>
+                    VIEW CODE
+                </a>
             </div>
         )
 }
-
+zx  
     render() {
         return (
             <div className="content-container">
@@ -154,7 +157,7 @@ class Projects extends Component {
                         ["Java", "Jersey", "Jackson", "Grizzly", "Gradle", "HTML", "CSS", "React.js", "Node.js", "MySQL"]
                     )}
                     {this.projectCard(
-                        "golftracker", "Golf Tracker",
+                        "golftracker", "GolfTracker",
                         "Single page web application that allows users to create an account and " +
                         "manage their digital records of golf scorecards.",
                         ["Java", "Spring Boot", "HTML", "CSS", "React.js", "Node.js", "MySQL"]
