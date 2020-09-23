@@ -6,12 +6,11 @@ class Home extends Component {
             <div id="home-container" className="content-container">
                 <img className="content-bg" src="images/losangeles.png" alt="Los Angeles" />
                 <div id="home-text">
-                    <h3 id="home-greeting">Hi. My name is</h3>
-                    <h3 id="home-name">Dan Tablac.</h3>
+                    <p id="home-name">DAN TABLAC</p>
                     <hr className="home-line"/>
-                    <h3 id="home-statement">
-                        I am a software developer looking to create websites and web applications.
-                    </h3>
+                    <p id="home-statement">
+                        Software developer looking to create websites and web applications
+                    </p>
                 </div>
             </div>
         );
