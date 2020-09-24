@@ -91,6 +91,7 @@ class Projects extends Component {
         const { fabflix_img, fabflix_index, golftracker_img, golftracker_index } = this.state;
         let projectImage;
         let projectIndex;
+        let projectUrl;
 
         switch (projectName) {
             case "fabflix":
@@ -100,6 +101,7 @@ class Projects extends Component {
             case "golftracker":
                 projectImage = golftracker_img;
                 projectIndex = golftracker_index;
+                projectUrl = "https://the-golf-tracker.herokuapp.com"
                 break;
             default:
                 break;
@@ -137,9 +139,12 @@ class Projects extends Component {
                         })}
                     </div>
                 </div>
-                <a className="btn-repo" href={"http://github.com/dctablac/"+projectTitle}>
-                    VIEW CODE
-                </a>
+                <div className="repo-buttons">
+                    <a className="btn-repo" href={"http://github.com/dctablac/"+projectTitle} target="_blank" rel="noopener noreferrer">VIEW CODE</a>
+                    {(projectName !== "fabflix") &&
+                        <a className="btn-repo" href={projectUrl} target="_blank" rel="noopener noreferrer">APP</a>
+                    }
+                </div>
             </div>
         )
 }
@@ -154,13 +159,13 @@ zx
                         "Single page eCommerce web application that allows users to create an account, " +
                         "browse for movies, and modify their shopping cart to \"purchase\" quantities " +
                         "of select titles through Paypal.", 
-                        ["Java", "Jersey", "Jackson", "Grizzly", "Gradle", "HTML", "CSS", "React.js", "Node.js", "MySQL"]
+                        ["Java", "Jersey", "Jackson", "Grizzly", "Gradle", "REST", "HTML", "CSS", "Javascript", "React.js", "Node.js", "MySQL"]
                     )}
                     {this.projectCard(
                         "golftracker", "GolfTracker",
                         "Single page web application that allows users to create an account and " +
                         "manage their digital records of golf scorecards.",
-                        ["Java", "Spring Boot", "HTML", "CSS", "React.js", "Node.js", "MySQL"]
+                        ["Java", "Spring Boot", "REST", "HTML", "CSS", "Javascript", "React.js", "Node.js", "MySQL"]
                     )}
                 </div>    
             </div>
