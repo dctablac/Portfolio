@@ -316,7 +316,7 @@
     text-decoration: none;
     transition-duration: 0.3s;
     margin: 2%;
-    width: 20%;
+    width: auto;
 }
 .resume:hover {
     color: black;
@@ -345,6 +345,7 @@
     font-size: 1rem;
     margin: 2%;
     padding: 3%;
+    width: auto;
 }
 .tech-tag:hover {
     transform: scale(1.2);
@@ -433,7 +434,7 @@
         z-index: 2;
         flex-direction: row;
         width: 100%;
-        height: 10vh;
+        height: 8vh;
         justify-content: center;
         align-items: center;
         
