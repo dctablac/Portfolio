@@ -194,10 +194,10 @@
 }
 .home-line {
     animation: drawLine 1.2s ease forwards;
-    background: black;
     border: none;
-    margin-left: 50%;
+    background: black;
     height: 4px;
+    margin: auto;
 }
 #home-name {
     animation: fadeIn 1.5s ease;
@@ -212,8 +212,10 @@
     text-align: center;
 }
 #home-text {
+    justify-items: center;
     letter-spacing: 5px;
     margin-top: 5%;
+    padding: 5%;
     position: relative;
     word-spacing: 10px;
 }
@@ -250,7 +252,6 @@
     grid-template-rows: auto auto; 
     position: relative;
     
-    /*border: 50px solid lightgrey;*/
     box-shadow: 0px 5px 10px black;
     background-color: var(--bg-color);
     padding: 5%;
@@ -355,12 +356,10 @@
 @keyframes drawLine {
     from {
         opacity: 0;
-        margin-left: 50%;
         width: 0%;
     }
     to {
         opacity: 1;
-        margin-left: 10%;
         width: 70vw;
     }
 }
@@ -415,14 +414,11 @@
     .contact-info {
         font-size: 1.2rem;
     }
-    .home-bg {
-        min-height: 100vh;
-    }
     #home-text {
         margin-top: 15vh;
     }
     #home-name {
-        font-size: 8rem;
+        font-size: 6rem;
     }
     .nav-bar {
         position: fixed;
@@ -435,8 +431,7 @@
         
     }
     .nav-link {
-        padding-top: 2%;
-        padding-bottom: 2%;
+        padding: 2% 2%;
     }
     .project {
         align-items: center;

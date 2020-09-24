@@ -7,7 +7,7 @@ class Home extends Component {
                 <img className="content-bg" src="images/losangeles.png" alt="Los Angeles" />
                 <div id="home-text">
                     <p id="home-name">DAN TABLAC</p>
-                    <hr className="home-line"/>
+                    <hr className="home-line" align="center"/>
                     <p id="home-statement">
                         Software developer looking to create websites and web applications
                     </p>
