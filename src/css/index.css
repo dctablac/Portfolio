@@ -207,6 +207,7 @@
 }
 #home-statement {
     animation: fadeIn 2.5s ease;
+    font-size: 1.5rem;
     margin: 2%;
     text-align: center;
 }
@@ -420,14 +421,8 @@
     #home-text {
         margin-top: 15vh;
     }
-    #home-greeting {
-        font-size: 2.5rem;
-    }
     #home-name {
         font-size: 8rem;
-    }
-    #home-statement {
-        font-size: 2.5rem;
     }
     .nav-bar {
         position: fixed;
