@@ -9,14 +9,14 @@ class About extends Component {
                     <div className="about-text-container">
                         <img className="about-pic" src="images/headshot.jpeg" alt="Dan" />
                         <div className="social-media">
-                            <a href="http://www.github.com/dctablac">
+                            <a href="http://www.github.com/dctablac" target="_blank" rel="noopener noreferrer">
                                 <img className="social-media-icon" src="images/github.png" alt="github" />
                             </a>
-                            <a href="http://www.linkedin.com/in/dan-christopher-tablac-a7a26217a">
+                            <a href="http://www.linkedin.com/in/dan-christopher-tablac-a7a26217a" target="_blank" rel="noopener noreferrer">
                                 <img className="social-media-icon" src="images/linkedin.png" alt="linkedin" />
                             </a>
                         </div>
-                        <a href="Resume.pdf" className="resume" target="_blank">RESUME</a>
+                        <a href="DanTablac.pdf" className="resume" target="_blank">RESUME</a>
                         <h1>About Me</h1>
                         <p>
                             Hello! My name is Dan Tablac, and I am a recent graduate from the University of 

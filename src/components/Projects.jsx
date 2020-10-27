@@ -142,8 +142,8 @@ class Projects extends Component {
                 </a>
             </div>
         )
-}
-zx  
+    }
+
     render() {
         return (
             <div className="content-container">
